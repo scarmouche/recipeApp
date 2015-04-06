@@ -1,0 +1,43 @@
+@import '.meteor/local/build/programs/server/assets/packages/reywood_bootstrap3-sass/bootstrap';
+
+$bgcolor: lightblue;
+
+body {
+	background: $bgcolor;
+}
+
+.form-control {
+	margin-bottom: 15px;
+}
+
+.panel-primary {
+	padding: 20px;
+}
+
+.selected {
+	background-color: grey;
+}
+
+.recipe-list {
+	li {
+		cursor:pointer;
+		&:hover {
+			background-color: $bgcolor - 20;
+		}
+	} 
+	.selected {
+		&:hover {
+			background-color: grey;
+		}
+	}
+}
+
+.recipe-detail {
+	.title {
+		margin-left: 20px;
+	}
+}
+
+.recentThumb {
+	cursor: pointer;
+}

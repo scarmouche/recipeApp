@@ -1,0 +1,22 @@
+<template name="recentRecipes">
+	
+	<h1>Recently Added Recipes</h1>
+
+	<div class="clearfix">
+		{{#if hasRecipes}}
+
+			{{#each recentRecipes}}
+		  <div class="col-xs-6 col-sm-12 col-md-4">
+		  	<div class="recentThumb thumbnail">
+		      <img src="http://lorempixel.com/260/180/food" alt="...">
+		    </div>
+		  </div>
+		  {{/each}}
+
+		{{else}}
+			<p>You have not added any recipes yet</p>
+		{{/if}}
+	</div>
+	
+
+</template>

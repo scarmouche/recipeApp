@@ -1,0 +1,27 @@
+<template name="recipeDetail">
+
+	{{#if showSelectedRecipe}}
+
+	<div class="recipe-detail">
+		<div class="row">
+				<img src="http://lorempixel.com/260/180/food" class="pull-left" />
+				<h2 class="title pull-left">{{showSelectedRecipe.recipeTitle}}</h2>
+		</div>
+
+		<hr>
+		<h4>Ingredients</h4>
+		<p>{{showSelectedRecipe.ingredients}}</p>
+
+		<hr>
+		<h4>Instructions</h4>
+		<p>{{showSelectedRecipe.instructions}}</p>
+
+	</div>		
+
+  {{else}}
+
+  	{{> recentRecipes}}
+
+  {{/if}}
+	
+</template>
