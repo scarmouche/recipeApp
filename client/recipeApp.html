@@ -11,35 +11,34 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1><a href="http://localhost:3000">Recipe App</a></h1>
-      <h6>By Carmouche</h6>
-    </header>
 
-  	{{> addRecipe}}
-  
-    {{> recipeList}}
-
-  </div>
 </body>
 
-<template name="recipeList">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 pull-left">
-      <h2>Recipes</h2>
-      {{#if hasRecipes}}
-      <ul class="recipe-list list-group">
-        {{#each theRecipes}}
-          {{> recipeOption}}
-        {{/each}}
-      </ul>
-      {{else}}
-        <p>No Recipes to show</p>
-      {{/if}}
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-8 pull-right">
-      {{> recipeDetail}}
+<template name="RecipeAppLayout">
+  <div class="container">
+
+  <header>
+    <h1><a href="http://localhost:3000">Recipe App</a></h1>
+    <h6>By Carmouche</h6>
+
+    <a href="/addRecipe" class="btn btn-success">Add Recipe</a>
+  </header>
+
+  <div class="col-xs-12 col-sm-6 col-md-4 pull-left">
+    <div class="leftContent">
+      {{> yield "leftContent"}}
     </div>
   </div>
+  
+  <div class="col-xs-12 col-sm-6 col-md-8 pull-right">
+    <div class="mainContent">
+      {{> yield}}
+    </div>
+  </div>
+
+  <!-- <footer>
+    {{> yield "footer"}}
+  </footer> -->
+</div>
+
 </template>

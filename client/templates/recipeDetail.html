@@ -10,7 +10,12 @@
 
 		<hr>
 		<h4>Ingredients</h4>
-		<p>{{showSelectedRecipe.ingredients}}</p>
+		<!-- <p>{{showSelectedRecipe.ingredients}}</p> -->
+
+
+		{{#each showSelectedRecipe.ingredients}}
+		  <li>{{this}}</li>
+		{{/each}}
 
 		<hr>
 		<h4>Instructions</h4>

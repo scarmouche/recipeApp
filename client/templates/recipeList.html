@@ -1,0 +1,15 @@
+<template name="recipeList">
+
+  <h2>Recipes</h2>
+  
+  {{#if hasRecipes}}
+    <ul class="recipe-list list-group">
+      {{#each theRecipes}}
+        {{> recipeItem}}
+      {{/each}}
+    </ul>
+  {{else}}
+      <p>No Recipes to show</p>
+  {{/if}}
+
+</template>

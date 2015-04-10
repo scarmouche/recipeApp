@@ -12,11 +12,22 @@
 	  </div>
 	  <div class="panel-body">
 	    <form class="new-recipe">
-	    	<input type="text" class="form-control" name="recipeTitle" placeholder="Recipe Title" aria-describedby="add recipe title" />
+	    	<input type="text" class="form-control" name="recipeTitle" placeholder="Recipe Title" aria-describedby="add recipe title" required />
+
+	    	<h6>Enter Ingredients</h6>
 		
-		  <textarea class="form-control" name="ingredients" placeholder="Ingredients" aria-describedby="add recipe ingredients"></textarea>
+		  <!-- <textarea class="form-control" name="ingredients" placeholder="Ingredients" aria-describedby="add recipe ingredients"></textarea> -->
+		  <div class="addIngredients">
 		
-		  <textarea class="form-control" name="instructions" placeholder="Instructions" aria-describedby="add recipe instructions"></textarea>
+				<input type="text" class="form-control" name="ingredient-0" placeholder="ingredient" aria-describedby="add recipe ingredient" required />
+				<input type="text" class="form-control" name="ingredient-1" placeholder="ingredient" aria-describedby="add recipe ingredient" />
+				<input type="text" class="form-control" name="ingredient-2" placeholder="ingredient" aria-describedby="add recipe ingredient" />
+
+			</div>
+
+			<button class="moreIngredients btn btn-success">Add More ingredients</button>
+		
+		  <textarea class="form-control" name="instructions" placeholder="Instructions" aria-describedby="add recipe instructions" required></textarea>
 
 		  <button type="submit" class="btn btn-success">Submit</button>
 		  <button type="reset" class="btn btn-warning">Cancel</button>

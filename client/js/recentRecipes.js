@@ -8,5 +8,6 @@ Template.recentRecipes.events({
   "click .recentThumb": function(event) {
     var recipeId = this._id;
     Session.set('selectedRecipe', recipeId); 
+    Router.go('/recipe/' + recipeId);  
   }
 });

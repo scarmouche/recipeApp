@@ -1,5 +1,7 @@
 Recipes = new Mongo.Collection("recipes");
 
+Ingredients = new Mongo.Collection("ingredients");
+
 if (Meteor.isClient) {
 
   Template.registerHelper('theRecipes', function() {
@@ -14,25 +16,4 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.addRecipe.events({
-    "submit .new-recipe": function (event) {
-      var recipeTitle = event.target.recipeTitle.value,
-          ingredients = event.target.ingredients.value,
-          instructions = event.target.instructions.value;
-
-      Recipes.insert({
-        recipeTitle: recipeTitle,
-        ingredients: ingredients,
-        instructions: instructions,
-        createdAt: new Date() 
-      });
-
-      event.target.recipeTitle.value = "";
-      event.target.ingredients.value = "";
-      event.target.instructions.value = "";
-
-      return false;    
-    }
-  });
-
-}
+ }

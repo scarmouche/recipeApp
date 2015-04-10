@@ -1,4 +1,4 @@
-Template.recipeOption.helpers({
+Template.recipeItem.helpers({
   selectedClass: function() {
     var recipeId = this._id,
         selectedRecipe = Session.get('selectedRecipe');
